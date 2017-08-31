@@ -1,19 +1,16 @@
-# hyperterm-dark-fusion for [hyperterm](https://hyperterm.org/)
+# dark-fusion-vibrancy theme for [hyperterm](https://hyperterm.org/)
 
-[![npm version](https://img.shields.io/npm/v/hyperterm-dark-fusion.svg)](https://www.npmjs.com/package/hyperterm-dark-fusion)
+[![npm version](https://img.shields.io/npm/v/hyperterm-dark-fusion-vibrancy.svg)](https://www.npmjs.com/package/hyphyperterm-dark-fusion-vibrancy)
 
-# hyperterm-dark-fusion
-Hyperterm theme based on atom-dark-fusion https://github.com/MaxGraey/atom-dark-fusion-syntax
+Hyperterm theme based on [atom-dark-fusion](https://github.com/MaxGraey/atom-dark-fusion-syntax). This is a fork of [hyperterm-dark-fusion](https://github.com/brianmoran/hyperterm-dark-fusion) by Brian Moran which adds vibrancy support (transparent blurred background; only on MacOS). And some more minor tweaks.
 
-![alt tag](https://raw.githubusercontent.com/brianmoran/hyperterm-dark-fusion/master/screenshot.gif)
+![Screenshot](https://raw.githubusercontent.com/mdeboer/hyperterm-dark-fusion-vibrancy/master/screenshot.png)
 
-# Install with hpm
-`hpm install hyperterm-dark-fusion`
-
-# Install manually
-Add "hyperterm-dark-fusion" to plugins in .hyper.js
+# Installation
+Add "hyperterm-dark-fusion-vibrancy" to plugins in .hyper.js
 ```
   plugins: [
-    "hyperterm-dark-fusion",
+    "hyperterm-dark-fusion-vibrancy",
   ]
 ```
+
