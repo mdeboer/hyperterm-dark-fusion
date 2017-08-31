@@ -1,11 +1,11 @@
 'use strict'
 
 const foregroundColor = '#cedde0'
-const backgroundColor = '#2f3542'
+const backgroundColor = 'rgb(47,53,66,.65)'
 const black = backgroundColor
 const cyan = '#44C0C6'
 const orange = '#FC8458'
-const brightBlack = backgroundColor
+const brightBlack = '#2F3542'
 const brightWhite = foregroundColor
 const gray = '#3d424b'
 const green = '#cae359'
@@ -30,6 +30,8 @@ const colors = {
 	lightWhite: foregroundColor
 }
 
+exports.onWindow = browserWindow => browserWindow.setVibrancy('dark');
+
 exports.decorateConfig = config => {
 	return Object.assign({}, config, {
 		backgroundColor,
@@ -39,15 +41,30 @@ exports.decorateConfig = config => {
 		colors: colors,
 		css: `
 			${config.css || ''}
-			.tab_text {
-				border-bottom: 1px solid ${gray};
+			.tab_tab, .tabs_borderShim {
+				border: none;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				background-color: rgba(0,0,0,0.1);
             }
-            .tab_text.tab_textActive {
-                border-bottom: 1px solid ${orange};
+            .tab_tab.tab_active {
+				border: none;
+				background-color: transparent;
+				border-bottom-left-radius: 0px;
+				border-bottom-right-radius: 0px;
             }
-			.splitpane_divider {
-				border-top: 1px solid ${gray};
+			.tab_tab:last-child:not(.tab_active) {
+				border-bottom-right-radius: 0;
 			}
+			.splitpane_pane > .term_fit {
+				background-color: rgba(0,0,0,0.1);
+			}
+			.splitpane_pane > .term_active {
+				background-color: transparent;
+			}
+			/*.splitpane_divider {
+				border-top: 1px solid ${gray};
+			}*/
 		`
 	})
 }
